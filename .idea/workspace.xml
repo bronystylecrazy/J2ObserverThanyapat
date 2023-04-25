@@ -5,33 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aeb4bdda-eaad-4f76-afc5-2941ff2816fc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/J2ObserverThanyapat.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ThanyapatApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ListItemsRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WelcomeRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Music.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/factories/BookFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Factory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Observable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Observer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interfaces/Renderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/AddItemPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/DisplayPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/RemoveItemPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/WelcomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/Helper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/ItemObserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ThanyapatApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ThanyapatApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interfaces/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interfaces/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/ItemObserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/ItemObserver.java" afterDir="false" />
     </list>
     <list id="e945e14a-4c5c-4752-8e8f-f9fc3cf2a241" name="Changes by jirasin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,21 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -106,6 +84,8 @@
       <workItem from="1682437133153" duration="224000" />
       <workItem from="1682437396663" duration="159000" />
       <workItem from="1682437588660" duration="3627000" />
+      <workItem from="1682441642756" duration="51000" />
+      <workItem from="1682441712323" duration="944000" />
     </task>
     <servers />
   </component>

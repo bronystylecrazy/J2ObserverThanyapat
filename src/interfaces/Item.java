@@ -3,8 +3,10 @@ package interfaces;
 import utils.ItemObserver;
 
 import java.io.Serializable;
+import java.util.Observable;
+import java.util.Observer;
 
-public abstract class Item extends Observer<Item> implements Serializable {
+public abstract class Item implements Serializable, Observer {
     protected int id;
     protected static int count = 1; // for auto incrementing id
     private static final long serialVersionUID = 1L;
@@ -17,8 +19,7 @@ public abstract class Item extends Observer<Item> implements Serializable {
         this.name = name;
         this.description = description;
         this.type = type;
-        setObservable(ItemObserver.getInstance());
-        observable.subscribe(this);
+        ItemObserver.getInstance().addObserver(this);
     }
 
     public String getName() {
@@ -49,10 +50,15 @@ public abstract class Item extends Observer<Item> implements Serializable {
     }
 
     public void remove(){
-        observable.unsubscribe(this);
+        ItemObserver.getInstance().deleteObserver(this);
     }
 
     public static void setCounter(int _count){
         count = _count;
+    }
+
+    @Override
+    public void update(Observable observable, Object o) {
+
     }
 }

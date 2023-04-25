@@ -1,5 +1,4 @@
 import interfaces.Item;
-import interfaces.Observable;
 import pages.WelcomePage;
 import interfaces.Application;
 import utils.Helper;
@@ -7,6 +6,7 @@ import utils.ItemObserver;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Observable;
 
 public class ThanyapatApplication extends Application {
     public void run() throws InterruptedException {
@@ -27,11 +27,9 @@ public class ThanyapatApplication extends Application {
         Item.setCounter(lastId + 1);
         for (var obj : objects){
             Item item = (Item) obj;
-            item.setObservable(ov);
+            ov.addObserver(item);
             items.add(item);
         }
-
-        ov.setObservers(items);
         System.out.println(" Loaded " + items.size() + " item(s) from file.");
     }
 }
