@@ -1,14 +1,12 @@
 package pages;
 
+import factories.BookFactory;
 import factories.MovieFactory;
 import factories.MusicFactory;
-import interfaces.Item;
-import factories.BookFactory;
+import interfaces.Application;
 import interfaces.Factory;
 import interfaces.Page;
-import interfaces.Application;
 import utils.Helper;
-import utils.ItemObserver;
 
 public class AddItemPage extends Page {
 
@@ -38,31 +36,31 @@ public class AddItemPage extends Page {
         }
     }
 
-    public void addItemHandler(Application context){
+    public void addItemHandler(Application context) {
         askForItemType(context);
     }
 
-    public void askForItemType(Application context){
+    public void askForItemType(Application context) {
         Helper.clearScreen();
         System.out.println("What type of item do you want to add?");
         listItemTypes();
 
-        try{
+        try {
             int choice = Helper.getIntegerInput();
             TYPES[choice].create();
             System.out.println("Item added successfully.");
             Thread.sleep(1000);
             Helper.clearScreen();
             context.switchPage(new DisplayPage());
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println("Invalid input. Please try again.");
             askForItemType(context);
         }
     }
 
-    public void listItemTypes(){
+    public void listItemTypes() {
         int index = 0;
-        for(var type: TYPES) {
+        for (var type : TYPES) {
             System.out.printf("[%d] %s\n", index++, type.getType()); // type.getType() is the name of the type
         }
     }

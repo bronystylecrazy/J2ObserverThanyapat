@@ -1,17 +1,19 @@
 package pages;
+
 import components.ListItemsRenderer;
-import interfaces.Page;
 import interfaces.Application;
+import interfaces.Page;
 import interfaces.Renderer;
 import utils.Helper;
 
 public class DisplayPage extends Page {
     private Renderer listItemRenderer = new ListItemsRenderer();
+
     @Override
     public void display(Application context) throws InterruptedException {
         System.out.println("[0] For adding item.    [1] For removing item.   [2] Exit Program");
         listItemRenderer.render();
-        while(true) {
+        while (true) {
             int choice = Helper.getIntegerInput();
             switch (choice) {
                 case 0:

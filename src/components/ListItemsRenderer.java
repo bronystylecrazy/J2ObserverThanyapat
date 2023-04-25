@@ -10,10 +10,10 @@ import java.util.List;
 public class ListItemsRenderer extends Renderer {
     @Override
     public void render() {
-        List<Item> items =  ItemObserver.getInstance().getObservers();
+        List<Item> items = ItemObserver.getInstance().getObservers();
 
 
-        if(items.size() == 0){
+        if (items.size() == 0) {
             System.out.println("No items found.");
             return;
         }
@@ -25,9 +25,8 @@ public class ListItemsRenderer extends Renderer {
         System.out.format("+----+-----------+----------------------+--------------------------------+%n");
 
 
-
         for (var item : items) {
-            System.out.format(leftAlignFormat, item.getId(), Helper.limit(item.getType(),10), Helper.limit(item.getName(),20), Helper.limit(item.getDescription(),30));
+            System.out.format(leftAlignFormat, item.getId(), Helper.limit(item.getType(), 10), Helper.limit(item.getName(), 20), Helper.limit(item.getDescription(), 30));
         }
         System.out.format("+----+-----------+----------------------+--------------------------------+%n");
     }

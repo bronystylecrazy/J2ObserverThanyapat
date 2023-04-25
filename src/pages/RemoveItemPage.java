@@ -10,6 +10,7 @@ import utils.ItemObserver;
 
 public class RemoveItemPage extends Page {
     private Renderer listItemRenderer = new ListItemsRenderer();
+
     @Override
     public void display(Application context) throws InterruptedException {
         Helper.clearScreen();
@@ -17,10 +18,10 @@ public class RemoveItemPage extends Page {
         listItemRenderer.render();
         System.out.println("[0] Back");
         int choice = Helper.getIntegerInput();
-        if(choice == 0){
+        if (choice == 0) {
             Helper.clearScreen();
             context.switchPage(new DisplayPage());
-        }else {
+        } else {
             try {
                 Item item = ItemObserver.getInstance().getObserverById(choice);
                 item.remove();
