@@ -7,14 +7,14 @@ import java.util.Observable;
 import java.util.Observer;
 
 public abstract class Item implements Serializable, Observer {
-    protected int id;
-    protected static int count = 1; // for auto incrementing id
     private static final long serialVersionUID = 1L;
-    private String name;
+    protected static int count = 1; // for auto incrementing id
+    private final String name;
+    private final String type;
+    private int id;
     private String description;
-    private String type;
 
-    public Item(String name, String description, String type) {
+    public Item(final String name, final String description, final String type) {
         this.id = count++;
         this.name = name;
         this.description = description;
@@ -22,43 +22,44 @@ public abstract class Item implements Serializable, Observer {
         ItemObserver.getInstance().addObserver(this);
     }
 
-    public String getName() {
+    public static void setCounter(final int newCount) {
+        count = newCount;
+    }
+
+    public final String getName() {
         return name;
     }
 
-    public String getDescription() {
+    public final String getDescription() {
         return description;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public int getId() {
-        return id;
-    }
-    public void setId(int id){
-        this.id = id;
-    }
-
-    public void setDescription(String description) {
+    public final void setDescription(final String description) {
         this.description = description;
     }
 
-    public String toString() {
+    public final String getType() {
+        return type;
+    }
+
+    public final int getId() {
+        return id;
+    }
+
+    public final void setId(final int id) {
+        this.id = id;
+    }
+
+    public final String toString() {
         return String.format("Id: %d | Name: %s | Description: %s | Type: %s ", id, name, description, type);
     }
 
-    public void remove(){
+    public final void remove() {
         ItemObserver.getInstance().deleteObserver(this);
     }
 
-    public static void setCounter(int _count){
-        count = _count;
-    }
-
     @Override
-    public void update(Observable observable, Object o) {
+    public void update(final Observable observable, final Object o) {
 
     }
 }

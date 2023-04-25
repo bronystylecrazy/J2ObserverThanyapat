@@ -1,14 +1,15 @@
 package pages;
 
-import interfaces.Renderer;
 import components.WelcomeRenderer;
-import interfaces.Page;
 import interfaces.Application;
+import interfaces.Page;
+import interfaces.Renderer;
 
-public class WelcomePage extends Page {
-    private Renderer welcomeMessage = new WelcomeRenderer();
+public final class WelcomePage extends Page {
+    private final Renderer welcomeMessage = new WelcomeRenderer();
+
     @Override
-    public void display(Application context) throws InterruptedException {
+    public void display(final Application context) throws InterruptedException {
         welcomeMessage.render();
         context.switchPage(new DisplayPage()); // Switch to DisplayPage
     }

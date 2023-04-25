@@ -2,9 +2,7 @@ package entities;
 
 import interfaces.Item;
 
-import java.util.Observable;
-
-public class Movie extends Item {
+public final class Movie extends Item {
     private static final long serialVersionUID = 1L;
     private String genre;
 
@@ -17,7 +15,7 @@ public class Movie extends Item {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(final String genre) {
         this.genre = genre;
     }
 

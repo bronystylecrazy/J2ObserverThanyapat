@@ -2,7 +2,7 @@ package entities;
 
 import interfaces.Item;
 
-public class Music extends Item {
+public final class Music extends Item {
     private static final long serialVersionUID = 1L;
     private String artist;
 
@@ -15,7 +15,7 @@ public class Music extends Item {
         return artist;
     }
 
-    public void setArtist(String artist) {
+    public void setArtist(final String artist) {
         this.artist = artist;
     }
 

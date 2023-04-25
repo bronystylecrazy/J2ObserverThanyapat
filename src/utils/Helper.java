@@ -4,38 +4,44 @@ import java.io.*;
 import java.util.Scanner;
 
 public class Helper {
-    public static Helper instance;
-    private Scanner scanner = new Scanner(System.in);
+    private static Helper instance;
+    private final Scanner scanner = new Scanner(System.in);
 
-    public Helper(){
+    public Helper() {
         instance = this;
     }
 
     public static Helper getInstance() {
-        if(instance != null) return instance;
+        if (instance != null) {
+            return instance;
+        }
         return new Helper();
     }
 
-    public static Scanner getScanner(){
+    public static Scanner getScanner() {
         return getInstance().scanner;
     }
 
-    public static int getIntegerInput(){
+    public static int getIntegerInput() {
         return Integer.valueOf(getInput()); // This is a bad way to do this. I'll fix it later.
     }
 
-    public static String getInput(){
+    public static String getInput() {
         System.out.print("> ");
         return getScanner().nextLine();
     }
 
-    public static String limit(String text, int count){
-        if (text == null || text.isEmpty()) return "-";
-        if (text.length() <= count) return text;
+    public static String limit(final String text, final int count) {
+        if (text == null || text.isEmpty()) {
+            return "-";
+        }
+        if (text.length() <= count) {
+            return text;
+        }
         return text.substring(0, Math.min(text.length(), count) - 3) + "...";
     }
 
-    public static void writeObjectsToFile(String fileName, Object[] objects){
+    public static void writeObjectsToFile(final String fileName, final Object[] objects) {
         try {
             FileOutputStream fileOut = new FileOutputStream(fileName);
             ObjectOutputStream out = new ObjectOutputStream(fileOut);
@@ -48,8 +54,8 @@ public class Helper {
         }
     }
 
-    public static Object[] readObjectsFromFile(String fileName){
-        try{
+    public static Object[] readObjectsFromFile(final String fileName) {
+        try {
             FileInputStream fileIn = new FileInputStream(fileName);
             ObjectInputStream in = new ObjectInputStream(fileIn);
             Object[] objects = (Object[]) in.readObject();
@@ -64,7 +70,9 @@ public class Helper {
         return null;
     }
 
-    public static void clearScreen(){
-        for(var i = 0; i < 50; i++) System.out.println();
+    public static void clearScreen() {
+        for (var i = 0; i < 50; i++) {
+            System.out.println();
+        }
     }
 }

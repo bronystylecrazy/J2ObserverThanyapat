@@ -2,9 +2,7 @@ package components;
 
 import interfaces.Renderer;
 
-import static java.lang.Thread.*;
-
-public class WelcomeRenderer extends Renderer {
+public final class WelcomeRenderer extends Renderer {
     @Override
     public void render() throws InterruptedException {
         System.out.println("\n" +

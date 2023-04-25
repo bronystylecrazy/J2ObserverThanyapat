@@ -4,7 +4,7 @@ import entities.Music;
 import interfaces.Factory;
 import utils.Helper;
 
-public class MusicFactory extends Factory {
+public final class MusicFactory extends Factory {
 
     public MusicFactory() {
         super("music");

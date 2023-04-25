@@ -4,7 +4,7 @@ import entities.Book;
 import interfaces.Factory;
 import utils.Helper;
 
-public class BookFactory extends Factory {
+public final class BookFactory extends Factory {
 
     public BookFactory() {
         super("book");

@@ -4,7 +4,7 @@ import entities.Movie;
 import interfaces.Factory;
 import utils.Helper;
 
-public class MovieFactory extends Factory {
+public final class MovieFactory extends Factory {
 
     public MovieFactory() {
         super("movie");

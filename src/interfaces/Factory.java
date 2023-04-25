@@ -1,20 +1,20 @@
 package interfaces;
 
-import interfaces.Item;
-
 public abstract class Factory {
-    protected String type;
+    private final String type;
 
-    public Factory(String type) {
+    public Factory(final String type) {
         this.type = type;
     }
-    public String getType() {
+
+    public final String getType() {
         return type;
     }
+
     public abstract Item create();
 
     @Override
-    public String toString() {
+    public final String toString() {
         return super.toString();
     }
 }

@@ -8,40 +8,43 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class ItemObserver extends Observable {
-    private static List<Item> items = new ArrayList<>();
+    private static final List<Item> ITEMS = new ArrayList<>();
     private static ItemObserver instance;
-    public ItemObserver(){
+
+    public ItemObserver() {
         instance = this;
     }
 
     public static ItemObserver getInstance() {
-        if(instance != null) return instance;
+        if (instance != null) {
+            return instance;
+        }
         return new ItemObserver();
     }
 
-    public void notifyObservers(){
+    public final void notifyObservers() {
         super.notifyObservers();
         Helper.writeObjectsToFile("items.dat", getObservers().toArray());
     }
 
     @Override
-    public synchronized void addObserver(Observer o) {
+    public final synchronized void addObserver(Observer o) {
         super.addObserver(o);
-        items.add((Item) o);
+        ITEMS.add((Item) o);
     }
 
     @Override
-    public synchronized void deleteObserver(Observer o) {
+    public final synchronized void deleteObserver(Observer o) {
         super.deleteObserver(o);
-        items.remove((Item)o);
+        ITEMS.remove((Item) o);
     }
 
-    public List<Item> getObservers(){
-        return items;
+    public final List<Item> getObservers() {
+        return ITEMS;
     }
 
-    public Item getObserverById(int id){
-        for (Item item : items) {
+    public final Item getObserverById(final int id) {
+        for (Item item : ITEMS) {
             if (item.getId() == id) {
                 System.out.println("Found item with id: " + id);
                 return item;

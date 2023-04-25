@@ -1,6 +1,6 @@
+import interfaces.Application;
 import interfaces.Item;
 import pages.WelcomePage;
-import interfaces.Application;
 import utils.Helper;
 import utils.ItemObserver;
 
@@ -8,24 +8,24 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
 
-public class ThanyapatApplication extends Application {
+public final class ThanyapatApplication extends Application {
     public void run() throws InterruptedException {
         assembleResources();
         switchPage(new WelcomePage());
     }
 
-    public void assembleResources(){
+    public void assembleResources() {
         Object[] objects = Helper.readObjectsFromFile("items.dat");
         Observable ov = ItemObserver.getInstance();
-        if(objects == null || objects.length == 0) {
+        if (objects == null || objects.length == 0) {
             System.out.println(" No item(s) were loaded..");
             return; // No items in file
         }
 
         List<Item> items = new ArrayList<>();
-        int lastId = ((Item)objects[objects.length-1]).getId(); // Get last id
+        int lastId = ((Item) objects[objects.length - 1]).getId(); // Get last id
         Item.setCounter(lastId + 1);
-        for (var obj : objects){
+        for (var obj : objects) {
             Item item = (Item) obj;
             ov.addObserver(item);
             items.add(item);
